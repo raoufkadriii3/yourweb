@@ -1,0 +1,240 @@
+/* استيراد خط جلالي واحترافي من Google Fonts */
+
+@import url('https://googleapis.com');
+
+/* إعدادات المتصفح الأساسية */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+    color: #334155;
+    min-height: screen;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* الهيدر العلوي */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #2563eb;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    user-select: none;
+}
+
+.logo span {
+    color: #10b981;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 9999px;
+    border: 1px solid #dbeafe;
+}
+
+
+/* المنطقة الرئيسية والبطاقة */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.form-card {
+    max-width: 550px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+}
+
+.card-top-bar {
+    height: 6px;
+    background: linear-gradient(to right, #2563eb, #10b981);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+/* تصميم عناصر وعناصر إدخال النموذج */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1e293b;
+    transition: all 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+
+/* حقل الميزانية بالدينار الجزائري */
+
+.budget-input-wrapper {
+    position: relative;
+}
+
+.budget-input {
+    padding-left: 1rem;
+    padding-right: 6.5rem;
+    font-weight: 700;
+}
+
+.currency-badge {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    border-left: 1px solid #e2e8f0;
+    padding: 0 1rem;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    user-select: none;
+}
+
+
+/* زر الإرسال */
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+box-shadow: 0 20px 25px -5px rgba(37,
+99,
+235,
+0.25);
+
+}
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* الفوتر السفلي */
+.site-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    border-top: 1px solid #1e293b;
+}
+.site-footer span {
+    color: #ffffff;
+    font-weight: 700;
+}

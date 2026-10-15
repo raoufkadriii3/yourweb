@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yourweb.indz | اطلب موقعك الإلكتروني</title>
+    <!-- استدعاء ملف التنسيقات الخارجي المنفصل -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- الهيدر العلوي للموقع -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo">yourweb<span>.indz</span></a>
+            <span class="badge">🚀 خدمات الويب في الجزائر</span>
+        </div>
+    </header>
+
+    <!-- منطقة استمارة الطلب -->
+    <main class="main-content">
+        <div class="form-card">
+            <!-- شريط التصميم العلوي المتدرج -->
+            <div class="card-top-bar"></div>
+
+            <div class="card-body">
+                <h2 class="card-title">أرسل تفاصيل مشروعك الآن</h2>
+                <p class="card-subtitle">يرجى ملء النموذج أدناه بدقة وسنقوم بالتواصل معك في أقرب وقت لدراسة طلبك.</p>
+
+                <!-- فورم إرسال البيانات إلى الباكيند -->
+                <form action="http://localhost:3000/submit-request" method="POST">
+
+                    <!-- حقل الاسم -->
+                    <div class="form-group">
+                        <label class="form-label">الاسم الكامل / اسم الشركة</label>
+                        <input type="text" name="name" required placeholder="مثال: محمد بلقاسم" class="form-control">
+                    </div>
+
+                    <!-- حقل الإيميل (مع الحفاظ على لغته الإنجليزية) -->
+                    <div class="form-group" dir="ltr" style="text-align: right;">
+                        <label class="form-label" style="text-align: right;">البريد الإلكتروني</label>
+                        <input type="email" name="email" required placeholder="username@domain.com" class="form-control" style="text-align: left;">
+                    </div>
+
+                    <!-- حقل تفاصيل المشروع -->
+                    <div class="form-group">
+                        <label class="form-label">تفاصيل ونوع الموقع المطلوب</label>
+                        <textarea name="description" rows="4" required placeholder="أمثلة: موقع تجارة إلكترونية، موقع تعريفي لشركة، مدونة..." class="form-control"></textarea>
+                    </div>
+
+                    <!-- حقل الميزانية بالدينار الجزائري -->
+                    <div class="form-group">
+                        <label class="form-label">الميزانية المقترحة (د.ج)</label>
+                        <div class="budget-input-wrapper" dir="ltr">
+                            <input type="number" name="budget" min="1" required placeholder="50000" class="form-control budget-input" style="text-align: left;">
+                            <div class="currency-badge">DA | د.ج</div>
+                        </div>
+                    </div>
+
+                    <!-- زر الإرسال التفاعلي -->
+                    <button type="submit" class="submit-btn">إرسال الطلب الآن</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- فوتر أسفل الصفحة -->
+    <footer class="site-footer">
+        <p>© 2026 <span>yourweb.indz</span>. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+
+</html>
